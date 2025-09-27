@@ -1,0 +1,63 @@
+/* Base styles - already optimized */
+.bot-section-bg {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: url('/chatwithmebg.png') center center/cover no-repeat !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.bot-section-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(10, 16, 32, 0.92), rgba(10, 16, 32, 0.96));
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bot-section-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 📱 Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .bot-section-bg {
+    background-position: center top;
+    justify-content: flex-start;
+    padding: 1rem;
+    background-size: cover;
+  }
+}
+
+/* 📱📲 Small Tablets (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .bot-section-bg {
+    padding: 2rem;
+    background-position: center top;
+    background-size: cover;
+  }
+}
+
+/* 💻 Laptops & Medium Desktops (768px - 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .bot-section-bg {
+    padding: 3rem;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
+
+/* 🖥️ TV / Ultra-wide Screens (1200px and up) */
+@media (min-width: 1200px) {
+  .bot-section-bg {
+    padding: 4rem 6rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}

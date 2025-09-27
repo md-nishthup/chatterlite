@@ -1,0 +1,167 @@
+/* Grandmaster Style – PearAI Edition */
+.cosmochat-root {
+  max-width: 780px;
+  margin: 36px auto;
+  padding: 30px;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  color: #f2e9de;
+  background: linear-gradient(135deg, #101215 60%, #282428 100%);
+  border: 3px solid #e7c160;
+  border-radius: 32px;
+  box-shadow: 0 8px 36px 0 #000a, 0 1.5px 0 0 #fff4 inset;
+  backdrop-filter: blur(7px);
+
+  /* Make the whole chat window scrollable if large */
+  max-height: 85vh;
+  min-height: 450px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #e7c160 #322d23;
+}
+
+/* Custom grandmaster scrollbar for root */
+.cosmochat-root::-webkit-scrollbar {
+  width: 10px;
+  background: #282216;
+  border-radius: 10px;
+}
+.cosmochat-root::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ffe281aa,#af943706);
+  border-radius: 7px;
+  min-height: 36px;
+}
+.cosmochat-title {
+  font-family: 'Montserrat', serif;
+  font-size: 2.8rem;
+  text-align: center;
+  background: linear-gradient(90deg,#fceabb,#e7c160,#d4bb6a 56%,#fceabb 92%);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 10px #573a0f33, 0 2px 32px #ffecc144;
+}
+.cosmochat-btns,
+.cosmochat-btnrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.cosmochat-btn,
+.cosmochat-btn input[type="text"] {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+}
+.cosmochat-btn {
+  background: linear-gradient(90deg, #e7c160, #f5d88f 50%, #b89b38 95%);
+  color: #222;
+  font-weight: 600;
+  box-shadow: 0 1px 7px #e7c16061;
+  transition: transform 0.07s, box-shadow 0.07s, filter 0.18s;
+  border: 2px solid #fff2;
+  cursor: pointer;
+}
+.cosmochat-btn:active, .cosmochat-btn:focus {
+  filter: brightness(1.07) saturate(116%);
+  transform: translateY(2px) scale(0.96);
+  box-shadow: 0 0px 2px #b89b38;
+}
+.cosmochat-btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  filter: grayscale(60%);
+}
+.cosmochat-in-txt {
+  padding: 8px 12px;
+  margin-right: 6px;
+  background: #2d2b255c;
+  color: #fae3a7;
+  border: 1.5px solid #e7c16044;
+  font-size: 1em;
+  min-width: 80px;
+  box-shadow: 0 1px 2px #2222;
+  border-radius: 24px;
+  outline: none;
+  transition: border .18s;
+}
+.cosmochat-in-txt:focus {
+  border: 1.5px solid #e7c160;
+}
+.cosmochat-card {
+  background: linear-gradient(135deg, #18181a 85%, #3b320f 125%);
+  border-radius: 24px;
+  box-shadow: 0 7px 23px #000b, 0 1px 0 #e7c16020;
+  border: 2px solid #e7c16060;
+  margin-top: 18px;
+  padding: 26px 15px 18px 15px;
+  animation: fadein 0.7s cubic-bezier(.47,1.6,.37,.95);
+
+  /* NEW: scrollable for many results */
+  max-height: 56vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #e7c160 #322d23;
+}
+
+/* Custom scrollbar for .cosmochat-card */
+.cosmochat-card::-webkit-scrollbar {
+  width: 9px;
+  background: #282216;
+  border-radius: 10px;
+}
+.cosmochat-card::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ffe281aa,#af943706);
+  border-radius: 6px;
+}
+@keyframes fadein {
+  from { opacity:0; transform: translateY(30px);}
+  to { opacity:1; transform: none;}
+}
+.cosmochat-card img,
+.cosmochat-card video,
+.cosmochat-card iframe {
+  max-width: 100%;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  border: 2px solid #b89b3857;
+  box-shadow: 0 0px 10px #e7c16030;
+}
+.cosmochat-card h2,
+.cosmochat-card h3 {
+  background: linear-gradient(90deg,#ffe99b 10%,#baa24b 90%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 1.35em;
+  font-weight: bold;
+  margin: 0 0 6px 0;
+  letter-spacing: 1px;
+}
+.cosmochat-card ul {
+  margin-left: 18px;
+  margin-top: 2px;
+  font-size: 1.01em;
+  color: #ebcf7b;
+}
+.cosmochat-card li {
+  margin-bottom: 7px;
+  font-size: 1em;
+  line-height: 1.6;
+}
+.cosmochat-card a {
+  color: #ffe274;
+  text-decoration: underline;
+  transition: color .19s;
+}
+.cosmochat-card a:hover {
+  color: #fff2cc;
+}

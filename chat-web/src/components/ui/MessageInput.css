@@ -1,0 +1,89 @@
+.message-input-bar {
+  --bg: var(--bg-secondary, #1f2533);
+  --border: rgba(255,255,255,0.08);
+  --accent: var(--accent, #25d366);
+  display: flex;
+  align-items: flex-end;
+  gap: .6rem;
+  padding: .75rem 1rem;
+  background: var(--bg-frosted, rgba(30,38,52,.72));
+  backdrop-filter: blur(12px) saturate(1.4);
+  border-top: 1px solid var(--border);
+}
+
+.mi-textarea-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+}
+
+.mi-textarea {
+  width: 100%;
+  font: 500 1rem/1.35 system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary, #f5f7fa);
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+  padding: .85rem 1rem .9rem 1rem;
+  resize: none;
+  max-height: 180px;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,.25) inset, 0 0 0 1px rgba(255,255,255,0.04);
+  transition: border-color .18s, box-shadow .18s, background .25s;
+}
+
+.mi-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb,var(--accent) 40%, transparent);
+}
+
+.mi-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: var(--text-secondary, #dde2ea);
+  transition: background .2s, color .2s, transform .2s;
+}
+
+.mi-btn:hover:not(:disabled) {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+.mi-btn:active:not(:disabled) {
+  transform: scale(.92);
+}
+
+.mi-btn.primary {
+  background: linear-gradient(135deg,var(--accent) 0%, #2fe178 100%);
+  color: #fff;
+  font-size: 1.15rem;
+  box-shadow: 0 4px 12px -2px color-mix(in srgb,var(--accent) 55%, transparent), 0 1px 2px rgba(0,0,0,.4);
+}
+
+.mi-btn.primary:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.mi-btn.primary:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .message-input-bar {
+    gap: .5rem;
+    padding: .55rem .65rem .65rem;
+  }
+  .mi-btn { width: 40px; height: 40px; }
+  .mi-textarea { font-size: .95rem; padding: .75rem .9rem .8rem; }
+}

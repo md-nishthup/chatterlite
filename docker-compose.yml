@@ -1,0 +1,43 @@
+version: '3.9'
+services:
+  frontend:
+    build:
+      context: ./chat-web
+    image: chatterlite-frontend:latest
+    container_name: chatterlite-frontend
+    ports:
+      - "8080:80"
+    environment:
+      - VITE_API_BASE_URL=${VITE_API_BASE_URL:-http://localhost:4001}
+    depends_on:
+      - astrochat
+    restart: unless-stopped
+
+  astrochat:
+    build:
+      context: ./bot-backend
+      dockerfile: Dockerfile.astrochat
+    image: chatterlite-astrochat:latest
+    container_name: chatterlite-astrochat
+    environment:
+      - PORT=4001
+      - NASA_API_KEY=${NASA_API_KEY}
+    ports:
+      - "4001:4001"
+    restart: unless-stopped
+
+  bdnews:
+    build:
+      context: ./bot-backend
+      dockerfile: Dockerfile.bdnews
+    image: chatterlite-bdnews:latest
+    container_name: chatterlite-bdnews
+    environment:
+      - PORT=5000
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+
+networks:
+  default:
+    name: chatterlite-net

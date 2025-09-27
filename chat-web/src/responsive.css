@@ -1,0 +1,164 @@
+/* === Global Mobile Responsiveness for ChatterLite === */
+
+@media (max-width: 1024px) {
+    html, body {
+      font-size: 15px;
+      overflow-x: hidden;
+    }
+  
+    #root {
+      flex-direction: column !important;
+      width: 100vw !important;
+      min-height: 100vh !important;
+    }
+  
+    .chat-container {
+      border-radius: 0 !important;
+      max-width: 100vw !important;
+      height: 100vh !important;
+      box-shadow: none !important;
+    }
+  
+    .chat-header {
+      padding: 10px 16px !important;
+      font-size: 1rem !important;
+    }
+  
+    .chat-username {
+      font-size: 1.1rem !important;
+      gap: 8px !important;
+    }
+  
+    .header-actions {
+      gap: 10px !important;
+    }
+  
+    .header-icon-btn {
+      font-size: 1.2rem !important;
+      padding: 6px !important;
+    }
+  
+    .hamburger-btn {
+      display: inline-flex !important;
+    }
+  
+    .three-dots-btn {
+      font-size: 1.2rem !important;
+    }
+  
+    .chat-image {
+      max-width: 240px !important;
+      max-height: 240px !important;
+    }
+  
+    .messages {
+      padding: 1rem 1rem 0.75rem !important;
+      gap: 12px !important;
+    }
+  
+    .message {
+      font-size: 0.95rem !important;
+      padding: 0.7rem 1rem !important;
+      max-width: 85% !important;
+    }
+  
+    .msg-time {
+      font-size: 0.8rem !important;
+      margin-top: 0.3rem !important;
+    }
+  
+    .chat-input-area {
+      padding: 0.8rem 1rem !important;
+      gap: 0.5rem !important;
+      flex-direction: column !important;
+    }
+  
+    .chat-input-area textarea,
+    .chat-input-area input {
+      width: 100% !important;
+      font-size: 1rem !important;
+      padding: 0.85rem 1.1rem !important;
+    }
+  
+    .chat-input-area button.send-btn {
+      width: 100% !important;
+      font-size: 1rem !important;
+      padding: 0.7rem 1.2rem !important;
+    }
+  
+    .chat-image-download-btn {
+      padding: 3px 8px !important;
+      font-size: 11px !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .chat-header {
+      padding: 8px 12px !important;
+    }
+  
+    .chat-username {
+      font-size: 1rem !important;
+    }
+  
+    .hamburger-btn {
+      display: inline-flex !important;
+    }
+  
+    .header-actions {
+      display: none !important;
+    }
+  
+    .messages {
+      gap: 10px !important;
+    }
+  
+    .chat-input-area {
+      padding: 0.6rem 1rem !important;
+    }
+  
+    .send-btn {
+      width: 100% !important;
+      font-size: 1rem !important;
+      padding: 0.65rem 1rem !important;
+    }
+  
+    .chat-image {
+      max-width: 200px !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .chat-header {
+      font-size: 0.95rem !important;
+      gap: 6px;
+    }
+  
+    .chat-username {
+      font-size: 0.95rem !important;
+    }
+  
+    .message {
+      font-size: 0.9rem !important;
+    }
+  
+    .chat-image {
+      max-width: 180px !important;
+    }
+  
+    .chat-input-area {
+      gap: 0.4rem !important;
+      padding: 0.5rem 0.8rem !important;
+    }
+  
+    .chat-input-area input,
+    .chat-input-area textarea {
+      font-size: 0.95rem !important;
+    }
+  
+    .send-btn {
+      font-size: 0.95rem !important;
+      padding: 0.6rem 1rem !important;
+    }
+  }
+  

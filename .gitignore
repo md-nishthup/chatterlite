@@ -1,0 +1,6 @@
+# Ignore environment variable files
+.env
+.env.*
+chat-web/.env
+chat-web/.env.*
+node_modules

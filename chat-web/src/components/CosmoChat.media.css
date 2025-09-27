@@ -1,0 +1,124 @@
+/* Grandmaster Responsive Design for CosmoChat */
+
+/* MOBILE (≤600px) */
+@media (max-width: 600px) {
+  .cosmochat-root {
+    padding: 8vw 3vw 20vw 3vw;
+    border-radius: 18px;
+    font-size: 1em;
+    min-width: 0;
+    max-width: 99vw;
+  }
+  .cosmochat-title {
+    font-size: 2em;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+  .cosmochat-btns, .cosmochat-btnrow {
+    flex-direction: column;
+    gap: 9px;
+  }
+  .cosmochat-btn {
+    font-size: 1em;
+    min-width: 66vw;
+    padding: 11px 8px;
+  }
+  .cosmochat-in-txt {
+    font-size: 1em;
+    min-width: 48vw;
+    margin-bottom: 7px;
+  }
+  .cosmochat-card {
+    padding: 10px 2vw 12px 2vw;
+    border-radius: 10px;
+    font-size: 1em;
+    max-height: 42vh;
+  }
+}
+
+/* TABLET (601px–1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .cosmochat-root {
+    padding: 25px 2vw 25px 2vw;
+    border-radius: 22px;
+    font-size: 1.09em;
+    min-width: 0;
+    max-width: 95vw;
+  }
+  .cosmochat-title {
+    font-size: 2.15em;
+    margin-bottom: 20px;
+  }
+  .cosmochat-btns, .cosmochat-btnrow {
+    flex-direction: row;
+    gap: 11px;
+    flex-wrap: wrap;
+  }
+  .cosmochat-btn {
+    font-size: 1.01em;
+    padding: 10px 7vw;
+    min-width: 30vw;
+  }
+  .cosmochat-in-txt {
+    min-width: 22vw;
+    font-size: 1em;
+  }
+  .cosmochat-card {
+    padding: 13px 2vw 18px 2vw;
+    border-radius: 13px;
+    font-size: 1.01em;
+    max-height: 46vh;
+  }
+}
+
+/* LAPTOP (1025px–1800px) */
+@media (min-width: 1025px) and (max-width: 1800px) {
+  .cosmochat-root {
+    padding: 34px 40px;
+    font-size: 1.17em;
+    min-width: 540px;
+  }
+  .cosmochat-title {
+    font-size: 2.6em;
+  }
+  .cosmochat-btn {
+    min-width: 170px;
+    font-size: 1.07em;
+    padding: 9.5px 32px;
+  }
+  .cosmochat-in-txt {
+    min-width: 110px;
+    font-size: 1.06em;
+  }
+  .cosmochat-card {
+    font-size: 1.09em;
+    max-height: 55vh;
+  }
+}
+
+/* TV, Large (1800px+) */
+@media (min-width: 1801px) {
+  .cosmochat-root {
+    padding: 70px 90px 70px 90px;
+    font-size: 1.39em;
+    min-width: 740px;
+    max-width: 1450px;
+  }
+  .cosmochat-title {
+    font-size: 3.4em;
+    margin-bottom: 42px;
+  }
+  .cosmochat-btn {
+    font-size: 1.19em;
+    padding: 16px 48px;
+    min-width: 256px;
+  }
+  .cosmochat-in-txt {
+    min-width: 200px;
+    font-size: 1.18em;
+  }
+  .cosmochat-card {
+    font-size: 1.19em;
+    max-height: 62vh;
+  }
+}
