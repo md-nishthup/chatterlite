@@ -2,8 +2,5 @@
   "version": 2,
   "buildCommand": "cd chat-web && npm install && npm run build",
   "outputDirectory": "chat-web/dist",
-  "framework": "vite",
-  "functions": {
-    "api/**/*.{js,ts}": { "runtime": "nodejs20.x" }
-  }
+  "framework": "vite"
 }
