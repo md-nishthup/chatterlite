@@ -1,17 +1,9 @@
 {
   "version": 2,
-  "buildCommand": "npm run build --workspace=chat-web || (cd chat-web && npm install && npm run build)",
+  "buildCommand": "cd chat-web && npm install && npm run build",
   "outputDirectory": "chat-web/dist",
   "framework": "vite",
-  "env": {
-    "NASA_API_KEY": "@nasa_api_key",
-    "GROQ_API_KEY": "@groq_api_key",
-    "CLOUDINARY_CLOUD_NAME": "@cloudinary_cloud_name",
-    "CLOUDINARY_UPLOAD_PRESET": "@cloudinary_upload_preset"
-  },
   "functions": {
-    "api/astrochat.js": { "runtime": "nodejs20.x" },
-    "api/bdnews.js": { "runtime": "nodejs20.x" },
-    "api/image.js": { "runtime": "nodejs20.x" }
+    "api/**/*.{js,ts}": { "runtime": "nodejs20.x" }
   }
 }
